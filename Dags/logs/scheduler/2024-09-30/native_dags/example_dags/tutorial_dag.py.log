@@ -1,0 +1,57 @@
+[2024-09-30T00:02:46.316-0500] {processor.py:186} INFO - Started process (PID=2788) to work on /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-09-30T00:02:46.317-0500] {processor.py:914} INFO - Processing file /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py for tasks to queue
+[2024-09-30T00:02:46.318-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:02:46.318-0500] {dagbag.py:588} INFO - Filling up the DagBag from /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-09-30T00:02:46.325-0500] {processor.py:925} INFO - DAG(s) 'tutorial_dag' retrieved from /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-09-30T00:02:46.439-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:02:46.439-0500] {override.py:1901} INFO - Created Permission View: can read on DAG:tutorial_dag
+[2024-09-30T00:02:46.452-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:02:46.452-0500] {override.py:1901} INFO - Created Permission View: can edit on DAG:tutorial_dag
+[2024-09-30T00:02:46.462-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:02:46.462-0500] {override.py:1901} INFO - Created Permission View: can delete on DAG:tutorial_dag
+[2024-09-30T00:02:46.478-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:02:46.477-0500] {override.py:1901} INFO - Created Permission View: can read on DAG Run:tutorial_dag
+[2024-09-30T00:02:46.488-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:02:46.488-0500] {override.py:1901} INFO - Created Permission View: menu access on DAG Run:tutorial_dag
+[2024-09-30T00:02:46.498-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:02:46.497-0500] {override.py:1901} INFO - Created Permission View: can delete on DAG Run:tutorial_dag
+[2024-09-30T00:02:46.507-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:02:46.507-0500] {override.py:1901} INFO - Created Permission View: can create on DAG Run:tutorial_dag
+[2024-09-30T00:02:46.507-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:02:46.507-0500] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-09-30T00:02:46.518-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:02:46.517-0500] {dag.py:3262} INFO - Creating ORM DAG for tutorial_dag
+[2024-09-30T00:02:46.518-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:02:46.518-0500] {dag.py:4180} INFO - Setting next_dagrun for tutorial_dag to None, run_after=None
+[2024-09-30T00:02:46.542-0500] {processor.py:208} INFO - Processing /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py took 0.231 seconds
+[2024-09-30T00:04:04.848-0500] {processor.py:186} INFO - Started process (PID=2956) to work on /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-09-30T00:04:04.860-0500] {processor.py:914} INFO - Processing file /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py for tasks to queue
+[2024-09-30T00:04:04.861-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:04:04.861-0500] {dagbag.py:588} INFO - Filling up the DagBag from /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-09-30T00:04:04.868-0500] {processor.py:925} INFO - DAG(s) 'tutorial_dag' retrieved from /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-09-30T00:04:04.888-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:04:04.887-0500] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-09-30T00:04:04.900-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:04:04.900-0500] {dag.py:4180} INFO - Setting next_dagrun for tutorial_dag to None, run_after=None
+[2024-09-30T00:04:04.926-0500] {processor.py:208} INFO - Processing /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py took 0.082 seconds
+[2024-09-30T00:05:08.491-0500] {processor.py:186} INFO - Started process (PID=3012) to work on /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-09-30T00:05:08.495-0500] {processor.py:914} INFO - Processing file /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py for tasks to queue
+[2024-09-30T00:05:08.497-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:05:08.497-0500] {dagbag.py:588} INFO - Filling up the DagBag from /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-09-30T00:05:08.504-0500] {processor.py:925} INFO - DAG(s) 'tutorial_dag' retrieved from /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-09-30T00:05:08.518-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:05:08.518-0500] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-09-30T00:05:08.530-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:05:08.530-0500] {dag.py:4180} INFO - Setting next_dagrun for tutorial_dag to None, run_after=None
+[2024-09-30T00:05:08.560-0500] {processor.py:208} INFO - Processing /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py took 0.073 seconds
+[2024-09-30T00:06:00.092-0500] {processor.py:186} INFO - Started process (PID=3336) to work on /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-09-30T00:06:00.103-0500] {processor.py:914} INFO - Processing file /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py for tasks to queue
+[2024-09-30T00:06:00.106-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:06:00.105-0500] {dagbag.py:588} INFO - Filling up the DagBag from /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-09-30T00:06:00.113-0500] {processor.py:925} INFO - DAG(s) 'tutorial_dag' retrieved from /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-09-30T00:06:00.129-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:06:00.129-0500] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-09-30T00:06:00.141-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:06:00.141-0500] {dag.py:4180} INFO - Setting next_dagrun for tutorial_dag to None, run_after=None
+[2024-09-30T00:06:00.166-0500] {processor.py:208} INFO - Processing /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py took 0.080 seconds
+[2024-09-30T00:06:46.246-0500] {processor.py:186} INFO - Started process (PID=3383) to work on /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-09-30T00:06:46.254-0500] {processor.py:914} INFO - Processing file /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py for tasks to queue
+[2024-09-30T00:06:46.257-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:06:46.256-0500] {dagbag.py:588} INFO - Filling up the DagBag from /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-09-30T00:06:46.263-0500] {processor.py:925} INFO - DAG(s) 'tutorial_dag' retrieved from /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-09-30T00:06:46.277-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:06:46.277-0500] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-09-30T00:06:46.288-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:06:46.288-0500] {dag.py:4180} INFO - Setting next_dagrun for tutorial_dag to None, run_after=None
+[2024-09-30T00:06:46.309-0500] {processor.py:208} INFO - Processing /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py took 0.067 seconds
+[2024-09-30T00:07:34.836-0500] {processor.py:186} INFO - Started process (PID=3435) to work on /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-09-30T00:07:34.837-0500] {processor.py:914} INFO - Processing file /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py for tasks to queue
+[2024-09-30T00:07:34.839-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:07:34.839-0500] {dagbag.py:588} INFO - Filling up the DagBag from /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-09-30T00:07:34.846-0500] {processor.py:925} INFO - DAG(s) 'tutorial_dag' retrieved from /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-09-30T00:07:34.859-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:07:34.859-0500] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-09-30T00:07:34.870-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:07:34.870-0500] {dag.py:4180} INFO - Setting next_dagrun for tutorial_dag to None, run_after=None
+[2024-09-30T00:07:34.892-0500] {processor.py:208} INFO - Processing /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py took 0.061 seconds
+[2024-09-30T00:08:20.496-0500] {processor.py:186} INFO - Started process (PID=3484) to work on /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-09-30T00:08:20.498-0500] {processor.py:914} INFO - Processing file /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py for tasks to queue
+[2024-09-30T00:08:20.500-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:08:20.500-0500] {dagbag.py:588} INFO - Filling up the DagBag from /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-09-30T00:08:20.507-0500] {processor.py:925} INFO - DAG(s) 'tutorial_dag' retrieved from /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-09-30T00:08:20.521-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:08:20.521-0500] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-09-30T00:08:20.532-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:08:20.532-0500] {dag.py:4180} INFO - Setting next_dagrun for tutorial_dag to None, run_after=None
+[2024-09-30T00:08:20.557-0500] {processor.py:208} INFO - Processing /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/tutorial_dag.py took 0.065 seconds

@@ -1,0 +1,50 @@
+[2024-09-30T00:04:30.169-0500] {processor.py:186} INFO - Started process (PID=2980) to work on /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py
+[2024-09-30T00:04:30.169-0500] {processor.py:914} INFO - Processing file /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py for tasks to queue
+[2024-09-30T00:04:30.171-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:04:30.171-0500] {dagbag.py:588} INFO - Filling up the DagBag from /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py
+[2024-09-30T00:04:30.182-0500] {processor.py:925} INFO - DAG(s) 'example_complex' retrieved from /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py
+[2024-09-30T00:04:30.297-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:04:30.297-0500] {override.py:1901} INFO - Created Permission View: can read on DAG:example_complex
+[2024-09-30T00:04:30.309-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:04:30.309-0500] {override.py:1901} INFO - Created Permission View: can delete on DAG:example_complex
+[2024-09-30T00:04:30.318-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:04:30.318-0500] {override.py:1901} INFO - Created Permission View: can edit on DAG:example_complex
+[2024-09-30T00:04:30.335-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:04:30.335-0500] {override.py:1901} INFO - Created Permission View: can read on DAG Run:example_complex
+[2024-09-30T00:04:30.344-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:04:30.344-0500] {override.py:1901} INFO - Created Permission View: menu access on DAG Run:example_complex
+[2024-09-30T00:04:30.353-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:04:30.352-0500] {override.py:1901} INFO - Created Permission View: can delete on DAG Run:example_complex
+[2024-09-30T00:04:30.362-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:04:30.361-0500] {override.py:1901} INFO - Created Permission View: can create on DAG Run:example_complex
+[2024-09-30T00:04:30.362-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:04:30.362-0500] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-09-30T00:04:30.372-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:04:30.372-0500] {dag.py:3262} INFO - Creating ORM DAG for example_complex
+[2024-09-30T00:04:30.373-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:04:30.372-0500] {dag.py:4180} INFO - Setting next_dagrun for example_complex to None, run_after=None
+[2024-09-30T00:04:30.394-0500] {processor.py:208} INFO - Processing /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py took 0.230 seconds
+[2024-09-30T00:05:31.429-0500] {processor.py:186} INFO - Started process (PID=3036) to work on /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py
+[2024-09-30T00:05:31.440-0500] {processor.py:914} INFO - Processing file /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py for tasks to queue
+[2024-09-30T00:05:31.442-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:05:31.442-0500] {dagbag.py:588} INFO - Filling up the DagBag from /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py
+[2024-09-30T00:05:31.453-0500] {processor.py:925} INFO - DAG(s) 'example_complex' retrieved from /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py
+[2024-09-30T00:05:31.477-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:05:31.477-0500] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-09-30T00:05:31.488-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:05:31.487-0500] {dag.py:4180} INFO - Setting next_dagrun for example_complex to None, run_after=None
+[2024-09-30T00:05:31.517-0500] {processor.py:208} INFO - Processing /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py took 0.093 seconds
+[2024-09-30T00:06:24.980-0500] {processor.py:186} INFO - Started process (PID=3361) to work on /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py
+[2024-09-30T00:06:24.981-0500] {processor.py:914} INFO - Processing file /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py for tasks to queue
+[2024-09-30T00:06:24.984-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:06:24.983-0500] {dagbag.py:588} INFO - Filling up the DagBag from /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py
+[2024-09-30T00:06:24.998-0500] {processor.py:925} INFO - DAG(s) 'example_complex' retrieved from /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py
+[2024-09-30T00:06:25.029-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:06:25.029-0500] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-09-30T00:06:25.046-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:06:25.045-0500] {dag.py:4180} INFO - Setting next_dagrun for example_complex to None, run_after=None
+[2024-09-30T00:06:25.075-0500] {processor.py:208} INFO - Processing /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py took 0.102 seconds
+[2024-09-30T00:07:18.694-0500] {processor.py:186} INFO - Started process (PID=3418) to work on /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py
+[2024-09-30T00:07:18.695-0500] {processor.py:914} INFO - Processing file /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py for tasks to queue
+[2024-09-30T00:07:18.697-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:07:18.697-0500] {dagbag.py:588} INFO - Filling up the DagBag from /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py
+[2024-09-30T00:07:18.709-0500] {processor.py:925} INFO - DAG(s) 'example_complex' retrieved from /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py
+[2024-09-30T00:07:18.734-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:07:18.734-0500] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-09-30T00:07:18.747-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:07:18.746-0500] {dag.py:4180} INFO - Setting next_dagrun for example_complex to None, run_after=None
+[2024-09-30T00:07:18.772-0500] {processor.py:208} INFO - Processing /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py took 0.083 seconds
+[2024-09-30T00:08:06.293-0500] {processor.py:186} INFO - Started process (PID=3468) to work on /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py
+[2024-09-30T00:08:06.305-0500] {processor.py:914} INFO - Processing file /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py for tasks to queue
+[2024-09-30T00:08:06.306-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:08:06.306-0500] {dagbag.py:588} INFO - Filling up the DagBag from /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py
+[2024-09-30T00:08:06.317-0500] {processor.py:925} INFO - DAG(s) 'example_complex' retrieved from /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py
+[2024-09-30T00:08:06.340-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:08:06.340-0500] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-09-30T00:08:06.355-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:08:06.355-0500] {dag.py:4180} INFO - Setting next_dagrun for example_complex to None, run_after=None
+[2024-09-30T00:08:06.383-0500] {processor.py:208} INFO - Processing /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py took 0.095 seconds
+[2024-09-30T00:08:52.314-0500] {processor.py:186} INFO - Started process (PID=3517) to work on /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py
+[2024-09-30T00:08:52.316-0500] {processor.py:914} INFO - Processing file /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py for tasks to queue
+[2024-09-30T00:08:52.318-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:08:52.318-0500] {dagbag.py:588} INFO - Filling up the DagBag from /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py
+[2024-09-30T00:08:52.329-0500] {processor.py:925} INFO - DAG(s) 'example_complex' retrieved from /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py
+[2024-09-30T00:08:52.352-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:08:52.352-0500] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-09-30T00:08:52.363-0500] {logging_mixin.py:190} INFO - [2024-09-30T00:08:52.363-0500] {dag.py:4180} INFO - Setting next_dagrun for example_complex to None, run_after=None
+[2024-09-30T00:08:52.388-0500] {processor.py:208} INFO - Processing /home/joan/Desktop/Proyect-ETL/criminal_minds/criminal_env/lib/python3.12/site-packages/airflow/example_dags/example_complex.py took 0.079 seconds
