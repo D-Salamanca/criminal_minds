@@ -3,3 +3,5 @@ Data/clean_data.csv
 criminal_env
 .env
 *__pycache__
+*docker-secrets
+*docker-secrets-pgadmin
