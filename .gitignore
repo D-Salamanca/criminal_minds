@@ -5,3 +5,12 @@ criminal_env
 *__pycache__
 *docker-secrets
 *docker-secrets-pgadmin
+test
+*Logs
+*logs
+*airflow-webserver.pid
+*airflow.db
+*standalone_admin_password.txt
+*airflow.cfg
+*webserver_config.py
+
