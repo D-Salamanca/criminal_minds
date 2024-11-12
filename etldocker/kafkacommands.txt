@@ -1,0 +1,3 @@
+#criminaltopic
+
+docker exec -it <container_name> kafka-topics --create --topic <topic_name> --botstrap-server localhost:9092

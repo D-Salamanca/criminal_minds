@@ -64,4 +64,7 @@ def load_to_postgres(**kwargs):
     except Exception as err:
         logger.error(f"[{datetime.now()}] - Error occurred: {err}")
         raise Exception("The task wasn't complete")
+    
+    finally:
+        session.close()
 
