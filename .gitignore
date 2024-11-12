@@ -13,4 +13,5 @@ test
 *standalone_admin_password.txt
 *airflow.cfg
 *webserver_config.py
+*vscode
 
