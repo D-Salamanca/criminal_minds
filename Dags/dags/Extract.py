@@ -11,7 +11,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("[Extracts:logs]")
 
-def Extract():
+def Extract() -> json:
     try:
         engine = conn.engine
         Session = sessionmaker(bind=engine)
