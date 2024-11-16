@@ -1,0 +1,40 @@
+services:
+  postgres_criminal_db:
+    container_name: postgres_criminal_db
+    image: postgres:16
+    environment:
+      - POSTGRES_INITDB_ARGS=--encoding=UTF8
+      - POSTGRES_DB=criminal_minds
+    networks:
+      - criminalnet
+    env_file:
+      - ./docker-secrets
+    volumes:
+      - db_postgres_criminal_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  pgadmin_criminal_db:
+    container_name: pgadmin_criminal_db
+    image: dpage/pgadmin4:latest
+    networks:
+      - criminalnet
+    env_file:
+      - ./docker-secrets-pgadmin
+    environment:
+      - PGADMIN_CONFIG_DISABLE_CHECK_FOR_UPDATES=True
+    volumes:
+      - pgadmin_criminal:/var/lib/pgadmin
+    ports:
+      - "9080:80"
+    links:
+      - postgres_criminal_db
+
+
+volumes:
+  db_postgres_criminal_data:
+  pgadmin_criminal:
+
+networks:
+  criminalnet:
+    driver: bridge

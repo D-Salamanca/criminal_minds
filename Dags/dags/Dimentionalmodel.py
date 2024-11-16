@@ -1,6 +1,6 @@
 # Dimentionalmodel.py
 import sys
-sys.path.append("/home/joan/Desktop/Proyect-ETL/criminal_minds/src")
+sys.path.append("/criminal_minds/src")
 from db_connection import conn  # Import the engine.connect()
 import pandas as pd
 from datetime import datetime
@@ -13,7 +13,7 @@ logger = logging.getLogger("[Charge:logs]")
 
 def load_to_postgres(**kwargs):
     try:
-        logger.info(f"[{datetime.now()}] -- start to charge")
+        logger.info(f"[{datetime.now()}] -- Start to charge")
         
         # Extraer el valor de XCom
         ti = kwargs["ti"]
@@ -21,14 +21,15 @@ def load_to_postgres(**kwargs):
         
         # Verificar si el valor de XCom no es None
         if xcom_value is None:
+            logger.error("XCom returned None, check the 'Extract_data' task.")
             raise ValueError("XCom returned None, check the 'Extract_data' task.")
         
-        logger.info(f"[{datetime.now()}] -- XCom Value: {xcom_value}")
+        logger.info(f"[{datetime.now()}] -- XCom Value: {xcom_value[:500]}...")  # Mostrar solo una parte del JSON
         
         # Cargar el JSON
         json_charge = json.loads(xcom_value)
         df = pd.json_normalize(data=json_charge)
-
+    
         # Cargar la tabla "Area"
         Area = df[["AREA","AREA NAME"]].drop_duplicates()
         Area.sort_values(by="AREA", inplace=True)
@@ -64,7 +65,8 @@ def load_to_postgres(**kwargs):
     except Exception as err:
         logger.error(f"[{datetime.now()}] - Error occurred: {err}")
         raise Exception("The task wasn't complete")
-    
+    except ValueError as err:
+        logger.error(f"X-com null")
     finally:
         session.close()
 

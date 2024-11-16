@@ -1,5 +1,5 @@
 import sys
-sys.path.append("/home/joan/Desktop/Proyect-ETL/criminal_minds/src")
+sys.path.append("/criminal_minds/src")
 import os
 import json
 import logging
@@ -48,9 +48,9 @@ def Extract() -> json:
 
 def Transform (**kwargs: json) -> json:
     ti = kwargs["ti"]
-    xcom_value = ti.xcom_pull(task_ids="Extract_data")
+    xcom_value = ti.xcom_pull(task_ids="Extract_api_data")
     if xcom_value is None:
-        raise ValueError("XCom returned None, check the 'Extract_data' task.")
+        raise ValueError("XCom returned None, check the 'Extract_api_data' task.")
      
     json_charge = json.loads(xcom_value)
     data = pd.json_normalize(data=json_charge)
@@ -148,24 +148,29 @@ def Transform (**kwargs: json) -> json:
 
     # Crear la nueva columna con la agrupación
     data['sector_group'] = data['industry_description'].map(industry_groups)
-    
+
+    data = data.to_json(orient="records")  
     return data
 
 
 def Load(**kwargs: json) -> None:
     ti = kwargs["ti"]
-    xcom_value = ti.xcom_pull(task_ids="Extract_data")
+    xcom_value = ti.xcom_pull(task_ids="Transform_api_data")
     if xcom_value is None:
-        raise ValueError("XCom returned None, check the 'Extract_data' task.")
+        raise ValueError("XCom returned None, check the 'Transform_api_data' task.")
      
     json_charge = json.loads(xcom_value)
     data = pd.json_normalize(data=json_charge)
+    logger.info(f"{data.head(5)}")
+    session = None
     try:
-        engine = conn.engine()
+        engine = conn.engine
         Session = sessionmaker(bind=engine)
         session = Session()
         data.to_sql("api_data", con=engine, if_exists='append', index=False)
     except:
-        print("except")
+        logger.error("Faild to save the data")
+        raise Exception()
     finally:
-        session.close()
+        if session:  # Cerrar la sesión solo si se creó
+            session.close()
