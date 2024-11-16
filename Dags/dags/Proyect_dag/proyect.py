@@ -65,4 +65,4 @@ with dag:
     )
 
     extract_data >> charge_dimentional_model >> producer_kafka
-    extract_api_data >> transform_api_data >> load_api_data #>> producer_kafka
+    extract_api_data >> transform_api_data >> load_api_data >> producer_kafka
