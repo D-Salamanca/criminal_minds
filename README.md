@@ -15,14 +15,15 @@ El objetivo principal es extraer los datos de un archivo CSV, transformarlos par
 - **PostgreSQL**: Base de datos relacional utilizada para almacenar los datos transformados.
 - **Power BI**: Herramienta de visualización utilizada para crear reportes interactivos.
 - **SQLAlchemy**: Utilizado para la conexión y operaciones con la base de datos PostgreSQL.
+- **Docker**: Utilizado para desplegar bases de datos y diferentes herramientas como kafka para este proyecto
 
 ## Requisitos Previos
 
 Antes de comenzar, asegúrate de tener instaladas las siguientes herramientas:
 
-- Python 3.x
+- Python 3.12
 - Jupyter Notebook
-- PostgreSQL
+- Docker
 - Git
 
 ## Instalación
@@ -43,9 +44,12 @@ Antes de comenzar, asegúrate de tener instaladas las siguientes herramientas:
    ```
 
 3. **Configura la base de datos**:
-
-   - Crea una base de datos en PostgreSQL.
-   - Modifica el archivo `src/db_connection.py` para añadir las credenciales de tu base de datos (nombre de la base de datos, usuario, contraseña, host, y puerto).
+   - Setear las variables de entorno de docker y pgadmin y quitar la extecion de eschema `Database/docker-secrets` & `Database/docker-secrets-pgadmin`
+   - Levanta el contenedor `Database/docker-compose.yaml`.
+     ```bash
+     cd Database
+     docker-compose up -d
+      ```
 
 ## Uso del Proyecto
 
