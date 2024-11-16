@@ -1,23 +1,20 @@
----
-
 # Proyecto ETL - Análisis de Crímenes en Los Ángeles
 
-Este proyecto se enfoca en el análisis de datos de crímenes reportados en Los Ángeles desde el año 2020, utilizando un enfoque de ETL (Extract, Transform, Load) para transformar y visualizar la información de manera eficiente.
+Este proyecto se enfoca en el análisis de datos de crímenes reportados en Los Ángeles desde el año 2020, utilizando un enfoque de ETL (Extract, Transform, Load) y herramientas modernas como Apache Airflow y Apache Kafka para procesar y transmitir datos, con visualizaciones interactivas creadas en Power BI.
 
 ## Descripción del Proyecto
-
-El objetivo principal es extraer los datos de un archivo CSV, transformarlos para su limpieza y normalización, cargarlos en una base de datos relacional, y luego realizar un análisis exploratorio de datos (EDA) junto con la generación de visualizaciones interactivas para identificar patrones de criminalidad.
+El objetivo principal es construir un pipeline ETL que extrae datos de un archivo CSV y una API externa (CPI by Industry), limpia y normaliza los datos, y los carga en una base de datos relacional. Además, implementamos un sistema de transmisión en tiempo real con Kafka y visualizaciones interactivas para identificar patrones de criminalidad.
 
 ## Tecnologías Utilizadas
 
-- **Python**: Utilizado para la manipulación y análisis de datos.
-- **Jupyter Notebooks**: Empleado para documentar y ejecutar el proceso de análisis de datos.
-- **PostgreSQL**: Base de datos relacional utilizada para almacenar los datos transformados.
-- **Power BI**: Herramienta de visualización utilizada para crear reportes interactivos.
-- **SQLAlchemy**: Utilizado para la conexión y operaciones con la base de datos PostgreSQL.
-- **Docker**: Utilizado para desplegar bases de datos y diferentes herramientas como kafka para este proyecto
-- **AIRFLOW**
-- **KAFKA**
+- **Python**: Para la manipulación y análisis de datos.
+- **Jupyter Notebooks**: Documentación y ejecución de análisis de datos.
+- **PostgreSQL**: Base de datos relacional para almacenar los datos transformados.
+- **Power BI**: Herramienta de visualización para crear reportes interactivos.
+- **Apache Airflow**: Orquestación de tareas ETL.
+- **Apache Kafka**: Transmisión de datos en tiempo real.
+- **SQLAlchemy**: Conexión y operaciones con la base de datos PostgreSQL.
+- **Docker**: Contenedorización de la infraestructura, incluyendo bases de datos y Kafka.
 
 ## Requisitos Previos
 
@@ -39,91 +36,80 @@ Antes de comenzar, asegúrate de tener instaladas las siguientes herramientas:
 
 2. **Instala las dependencias**:
 
-   Ejecuta el siguiente comando para instalar las dependencias necesarias:
-
    ```bash
    pip install -r requirements.txt
    ```
 
 3. **Configura la base de datos**:
-   - Setear las variables de entorno de docker y pgadmin y quitar la extecion de eschema `Database/docker-secrets` & `Database/docker-secrets-pgadmin`
-   - Levanta el contenedor `Database/docker-compose.yaml`.
+   - Configura las variables de entorno para Docker y pgAdmin. Ajusta `Database/docker-secrets` y `Database/docker-secrets-pgadmin` según sea necesario.
+   - Levanta el contenedor de la base de datos:
      ```bash
      cd Database
      docker-compose up -d
-      ```
-   - Correr el Notebook de precarga de los datos `Notebooks/preload.ipynb`
-   
-5. **Configura Kafka**:
-   - Levanta el contenedor `kafka/docker-compose.yaml`.
+     ```
+   - Ejecuta el notebook `Notebooks/preload.ipynb` para precargar los datos en PostgreSQL.
+
+4. **Configura Kafka**:
+   - Levanta el contenedor de Kafka:
      ```bash
      cd kafka
      docker-compose up -d
-      ```
-   - Crear el topic
+     ```
+   - Crea el topic de Kafka:
      ```bash
-     docker exex -it <container_kafka_name> kafka-topics --create --topic criminaltopic --bootstrap-server localhost:9092
+     docker exec -it <nombre_del_contenedor_kafka> kafka-topics --create --topic criminaltopic --bootstrap-server localhost:9092
      ```
 
-6. **Cofigurar Airflow**:
-   - Dentro del entorno virtual de python instalar Airflow `!Debe ser un sistema basado en unix`
+5. **Configura Airflow**:
+   - Activa tu entorno virtual de Python y configura Airflow (recomendado en sistemas basados en Unix):
      ```bash
-     source ruta/entorno/virtual/bin/activate
+     source /ruta/a/tu/entorno/virtual/bin/activate
      source set_airflow_var.sh
-     
      pip install apache-airflow
      ```
-
-   - Correr Airflow
+   - Ejecuta Airflow:
      ```bash
      source set_airflow_var.sh
      airflow standalone
      ```
-   - Verificar que esta el DAG `Proyect_ETL_Criminal_Minds`
-   
+   - Verifica que el DAG `Proyect_ETL_Criminal_Minds` esté disponible en la interfaz de Airflow.
+
 ## Uso del Proyecto
 
 ### 1. Preparación de los Datos
-
-Ejecuta el notebook `Notebooks/pre_load.ipynb` para cargar los datos del archivo CSV y realizar la limpieza inicial.
+Ejecuta el notebook `Notebooks/pre_load.ipynb` para cargar y limpiar los datos del archivo CSV.
 
 ### 2. Migración de Datos a la Base de Datos
-
-Después de la limpieza, migra los datos a PostgreSQL ejecutando el script `src/db_connection.py`:
+Ejecuta el script `src/db_connection.py` para migrar los datos limpios a PostgreSQL:
 
 ```bash
 python src/db_connection.py
 ```
 
 ### 3. Análisis Exploratorio de Datos (EDA)
-
-Realiza el análisis exploratorio de datos abriendo y ejecutando el notebook `Notebooks/EDA.ipynb`. Aquí se generarán visualizaciones clave basadas en los datos almacenados en la base de datos.
+Realiza el análisis exploratorio abriendo y ejecutando el notebook `Notebooks/EDA.ipynb`. Aquí se generan visualizaciones clave a partir de los datos almacenados en la base de datos.
 
 ### 4. Visualización en Power BI
-
-Importa los datos desde PostgreSQL a Power BI para crear visualizaciones interactivas que reflejen los patrones de criminalidad en Los Ángeles.
+Importa los datos desde PostgreSQL a Power BI y crea reportes interactivos que visualicen los patrones de criminalidad.
 
 ## Estructura del Proyecto
 
-- **Data/**: Carpeta destinada a los archivos de datos (actualmente vacía).
-- **Notebooks/**: Contiene los notebooks de Jupyter para el análisis y exploración de datos.
-- **src/**: Contiene el script para la conexión y migración de datos a la base de datos.
-- **requirements.txt**: Lista de dependencias necesarias para ejecutar el proyecto.
-- **README.md**: Documento que estás leyendo, con instrucciones para configurar y utilizar el proyecto.
+- **Data/**: Carpeta para los archivos de datos (actualmente vacía).
+- **Notebooks/**: Contiene los notebooks de Jupyter para análisis y exploración.
+- **src/**: Contiene scripts de conexión y migración de datos.
+- **Database/**: Configuraciones y secretos para la base de datos PostgreSQL y pgAdmin.
+- **kafka/**: Configuración de Kafka y docker-compose para transmisión de datos.
+- **requirements.txt**: Lista de dependencias necesarias.
+- **README.md**: Documento con instrucciones de configuración y uso.
 
 ## Contribuciones
 
-Las contribuciones son bienvenidas. Si deseas contribuir, sigue estos pasos:
+Las contribuciones son bienvenidas. Sigue estos pasos para contribuir:
 
 1. Realiza un fork del repositorio.
 2. Crea una nueva rama (`git checkout -b feature/nueva-característica`).
-3. Realiza los cambios necesarios.
-4. Haz commit de los cambios (`git commit -am 'Añadí una nueva característica'`).
-5. Haz push a la rama (`git push origin feature/nueva-característica`).
+3. Realiza los cambios.
+4. Haz commit (`git commit -am 'Añadí una nueva característica'`).
+5. Haz push (`git push origin feature/nueva-característica`).
 6. Crea un Pull Request.
 
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
-
----
