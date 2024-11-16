@@ -16,6 +16,8 @@ El objetivo principal es extraer los datos de un archivo CSV, transformarlos par
 - **Power BI**: Herramienta de visualización utilizada para crear reportes interactivos.
 - **SQLAlchemy**: Utilizado para la conexión y operaciones con la base de datos PostgreSQL.
 - **Docker**: Utilizado para desplegar bases de datos y diferentes herramientas como kafka para este proyecto
+- **AIRFLOW**
+- **KAFKA**
 
 ## Requisitos Previos
 
@@ -50,7 +52,35 @@ Antes de comenzar, asegúrate de tener instaladas las siguientes herramientas:
      cd Database
      docker-compose up -d
       ```
+   - Correr el Notebook de precarga de los datos `Notebooks/preload.ipynb`
+   
+5. **Configura Kafka**:
+   - Levanta el contenedor `kafka/docker-compose.yaml`.
+     ```bash
+     cd kafka
+     docker-compose up -d
+      ```
+   - Crear el topic
+     ```bash
+     docker exex -it <container_kafka_name> kafka-topics --create --topic criminaltopic --bootstrap-server localhost:9092
+     ```
 
+6. **Cofigurar Airflow**:
+   - Dentro del entorno virtual de python instalar Airflow `!Debe ser un sistema basado en unix`
+     ```bash
+     source ruta/entorno/virtual/bin/activate
+     source set_airflow_var.sh
+     
+     pip install apache-airflow
+     ```
+
+   - Correr Airflow
+     ```bash
+     source set_airflow_var.sh
+     airflow standalone
+     ```
+   - Verificar que esta el DAG `Proyect_ETL_Criminal_Minds`
+   
 ## Uso del Proyecto
 
 ### 1. Preparación de los Datos
